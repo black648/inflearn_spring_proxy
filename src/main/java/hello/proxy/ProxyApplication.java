@@ -4,6 +4,8 @@ import hello.proxy.config.AppV1Config;
 import hello.proxy.config.AppV2Config;
 import hello.proxy.config.v1_proxy.ConcreateProxyConfig;
 import hello.proxy.config.v1_proxy.InterfaceProxyConfig;
+import hello.proxy.config.v2_dynamicProxy.DynamicProxyBasicConfig;
+import hello.proxy.config.v2_dynamicProxy.DynamicProxyFilterConfig;
 import hello.proxy.trace.logtrace.LogTrace;
 import hello.proxy.trace.logtrace.ThreadLocalLogTrace;
 import org.springframework.boot.SpringApplication;
@@ -15,7 +17,9 @@ import org.springframework.core.task.TaskRejectedException;
 //@Import(AppV1Config.class)
 //@Import({AppV1Config.class, AppV2Config.class})
 //@Import(InterfaceProxyConfig.class)
-@Import(ConcreateProxyConfig.class)
+//@Import(ConcreateProxyConfig.class)
+//@Import(DynamicProxyBasicConfig.class)
+@Import(DynamicProxyFilterConfig.class)
 @SpringBootApplication(scanBasePackages = "hello.proxy.app") //주의
 public class ProxyApplication {
 
