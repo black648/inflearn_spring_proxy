@@ -10,6 +10,7 @@ public class ProxyPatternTest {
 
     @Test
     void noProxyTest() {
+        System.out.println("테스트");
         RealSubject realSubject = new RealSubject();
         ProxyPatternClient client = new ProxyPatternClient(realSubject);
         client.execute();
